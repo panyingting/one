@@ -12,8 +12,13 @@ public class Client {
         try{
             CustomThread thread = new CustomThread();
             thread.setState(EnumOfState.NEW);
-            thread.runnable();
+            // 场景一
+
             thread.block();
+
+            thread.runnable();
+            // 场景二
+
             thread.runnable();
             thread.running();
             thread.block();
@@ -26,7 +31,8 @@ public class Client {
         }
 
 
-    }
 
+
+    }
 
 }
